@@ -419,7 +419,7 @@ message(STATUS "")
 include( ${LOMSE_ROOT_DIR}/build-version.cmake )
 
 add_custom_target (build-version ALL
-  COMMAND ${CMAKE_COMMAND} -D LOMSE_ROOT_DIR=${CMAKE_SOURCE_DIR} -P ${CMAKE_SOURCE_DIR}/build-version.cmake
+  COMMAND ${CMAKE_COMMAND} -D LOMSE_ROOT_DIR=${CMAKE_CURRENT_SOURCE_DIR} -P ${CMAKE_CURRENT_SOURCE_DIR}/build-version.cmake
   WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
   COMMENT "setting Lomse version information ...")
 
